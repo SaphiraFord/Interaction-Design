@@ -1,3 +1,27 @@
+# Interaction Design
+
+# Hosted Site: https://saphiraford.github.io/Interaction-Design/
+
+# GitHub Repo: https://github.com/SaphiraFord/
+
+## Week 1:
+
+- Styled Components
+
+- Create a React Application
+
+## Week 2:
+
+- Deploying GitHub Pages
+
+- Routing
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

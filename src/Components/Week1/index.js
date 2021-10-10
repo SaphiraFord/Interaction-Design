@@ -2,7 +2,7 @@ import React from "react";
 import catLoadingScreen from "./Assets/cat-loading-screen-blue-background.gif"
 
 
-const LoadingScreen = () => (
+const Week1 = () => (
 
     <>
         <img src ={catLoadingScreen} />
@@ -10,4 +10,4 @@ const LoadingScreen = () => (
     </>
 );
 
-export default LoadingScreen;
+export default Week1;
