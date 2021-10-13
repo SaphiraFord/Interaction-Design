@@ -1,12 +1,7 @@
 //importing the library React and saving it to react to use it's methods
 //in react functions MUST return something
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Week1 from "./Components/Week1";
 import Week2 from "./Components/Week2";
 import styled from "styled-components";
@@ -44,18 +39,8 @@ const StyledWrapper2 = styled.div`
 
   function App() {
     return (
-        <Router>
-      
-          <div> 
-            <StyledWrapper2>
-              <h1>Cativity</h1>
-            </StyledWrapper2>
-            <StyledWrapper1>
-              <Week1 />
-            
-            </StyledWrapper1>
-          </div>
-          <Switch>
+      <Router>
+        <Switch>
           <Route path="/Week1">
             <Week1 />
           </Route>
@@ -63,7 +48,7 @@ const StyledWrapper2 = styled.div`
             <Week2 />
           </Route>
         </Switch>
-        </Router>
+      </Router>
       
     );
   }

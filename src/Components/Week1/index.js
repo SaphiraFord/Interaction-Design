@@ -7,6 +7,8 @@ const Week1 = () => (
     <>
         <img src ={catLoadingScreen} />
 
+        <p>Week 1</p>
+
     </>
 );
 
