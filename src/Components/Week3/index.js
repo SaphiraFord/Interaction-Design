@@ -16,7 +16,12 @@ const StyledButton = styled.button`
     height: 36px;
     length: 65px;
     
-    Padding: 10px, 16px, 10px, 16px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
     border: 0;
     border-radius: 4px;
 
@@ -31,6 +36,10 @@ const StyledButton = styled.button`
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 1.25px;
+
+
+
+
     
 
 
@@ -55,13 +64,14 @@ const StyledWrapper = styled.div `
 const Button = (props) => {
 
     //extracts the children from the props - it's called destructuring
-    const {children, color} = props
+    const {children, color, border} = props
 
 
-    return <StyledButton color={color} > {children} </StyledButton>
+    return <StyledButton border ={border}   color={color} > {children} </StyledButton>
     
 
 };
+
 
 const Week3 = () => {
 
@@ -70,8 +80,8 @@ const Week3 = () => {
         <StyledWrapper>
 
             <Button color="#7F54B3">LIKE</Button>
-            <Button color="#1280ee">LIKE</Button>
-            <Button color="#FFC0CB">LIKE</Button>
+            <Button border ="5px solid red" color="transparent">LIKE</Button>
+            <Button color="transparent">LIKE</Button>
         </StyledWrapper>
 
     )
