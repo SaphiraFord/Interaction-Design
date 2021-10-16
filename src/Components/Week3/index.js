@@ -61,15 +61,20 @@ const StyledWrapper = styled.div `
 
 
 //Text, color, size etc are all called in through props
-const Button = (props) => {
+export const Button = (props) => {
 
     //extracts the children from the props - it's called destructuring
-    const {children, color, border} = props
+    const {children, color, border} = props;
 
-
-    return <StyledButton border ={border}   color={color} > {children} </StyledButton>
+    return (
+        <StyledButton 
+        border ={border}   
+        color={color}
+        > 
+        {children}{""}
+        </StyledButton>
     
-
+    );
 };
 
 
