@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Week1 from "./Components/Week1";
 import Week2 from "./Components/Week2";
 import Week3 from "./Components/Week3";
+import Week4 from "./Components/Week4";
 
 //Will instantly return our navigation 
 const Homepage  = () => (<nav>
@@ -14,6 +15,7 @@ const Homepage  = () => (<nav>
       <Link to="/Week1">Week 1</Link>
       <Link to="/Week2">Week 2</Link>
       <Link to="/Week3">Week 3</Link>
+      <Link to="/Week3">Week 4</Link>
     </li>
   </ul>
 </nav>
@@ -35,6 +37,9 @@ const Homepage  = () => (<nav>
           </Route>
           <Route path="/Week3">
             <Week3 />
+          </Route>
+          <Route path="/Week4">
+            <Week4 />
           </Route>
           <Route path="/">
             <Homepage />

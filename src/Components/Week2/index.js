@@ -134,12 +134,15 @@ const PublicExpandIconTouchTarget = styled.div`
 
 
 
-    display: inline-block;
-    vertical-align: middle;
+    display: flex
+    align-items: center;
+    justify-content: center;
 
     height: 48px;
     width: 48px;
 
+
+    
     
     
 
@@ -148,7 +151,17 @@ const PublicExpandIconTouchTarget = styled.div`
 `;
 
 
-export const Week2 = () => (
+export const Week2 = () => {
+
+    const handleClick = () => {
+
+
+        console.log("button click");
+
+    } 
+    
+    return (
+    
 
     <>
 
@@ -159,13 +172,13 @@ export const Week2 = () => (
             </AppIconStyle>
             <TextComponent1><p>Cativity  -  Now</p></TextComponent1>
 
-            <PublicExpandIconTouchTarget>
-                <PublicExpandIcon>
-                    <PublicExpandIconBoundingBox>
-                    <img src ={PrivateExpandIcon} />
-                    </PublicExpandIconBoundingBox>
-                </PublicExpandIcon>
+            <PublicExpandIconTouchTarget onClick = {handleClick}>
+
+                    <img src ={PrivateExpandIcon} alt="Expand Icon."/>
+
             </PublicExpandIconTouchTarget>
+          
+
                 
             
         </AlertBoxPrivate>
@@ -174,6 +187,6 @@ export const Week2 = () => (
   
 
     </>
-);
+)};
 
 export default Week2;

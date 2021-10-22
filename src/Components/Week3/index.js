@@ -95,6 +95,8 @@ const imageContainer = styled.div `
 
 
 
+
+
 //Text, color, size etc are all called in through props
 export const Button = (props) => {
 
@@ -119,14 +121,16 @@ const Week3 = () => {
 
     return (
 
-        <StyledWrapper>
+        <StyledWrapper>     
+
+         
 
             <Button paddingLeft="16px" bkgColor="#7F54B3">LIKE</Button>
-            <Button paddingLeft="12px" bkgColor="#7F54B3"><imageContainer><img src ={heartIconWhite} /></imageContainer>LIKE</Button>
+            <Button paddingLeft="12px" bkgColor="#7F54B3"><imageContainer><img src ={heartIconWhite} alt="White heart icon"/></imageContainer>LIKE</Button>
             <Button paddingLeft="16px" border ="1px solid #7F54B3" bkgColor="transparent" fontColor="#7F54B3">LIKE</Button>
-            <Button paddingLeft="12px" border ="1px solid #7F54B3" bkgColor="transparent" fontColor="#7F54B3"><imageContainer><img src ={heartIconPurple} /></imageContainer>LIKE</Button>
+            <Button paddingLeft="12px" border ="1px solid #7F54B3" bkgColor="transparent" fontColor="#7F54B3"><imageContainer><img src ={heartIconPurple} alt="Purple heart icon"/></imageContainer>LIKE</Button>
             <Button paddingLeft="16px" bkgColor="transparent" fontColor="#7F54B3">LIKE</Button>
-            <Button paddingLeft="12px" bkgColor="transparent" fontColor="#7F54B3"><imageContainer><img src ={heartIconPurple} /></imageContainer>LIKE</Button>
+            <Button paddingLeft="12px" bkgColor="transparent" fontColor="#7F54B3"><imageContainer><img src ={heartIconPurple} alt="Purple heart icon"/></imageContainer>LIKE</Button>
         </StyledWrapper>
 
     )
