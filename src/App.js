@@ -6,6 +6,8 @@ import Week1 from "./Components/Week1";
 import Week2 from "./Components/Week2";
 import Week3 from "./Components/Week3";
 import Week4 from "./Components/Week4";
+import Week5 from "./Components/Week5";
+import Week6 from "./Components/Week6";
 
 //Will instantly return our navigation 
 const Homepage  = () => (<nav>
@@ -15,7 +17,9 @@ const Homepage  = () => (<nav>
       <Link to="/Week1">Week 1</Link>
       <Link to="/Week2">Week 2</Link>
       <Link to="/Week3">Week 3</Link>
-      <Link to="/Week3">Week 4</Link>
+      <Link to="/Week4">Week 4</Link>
+      <Link to="/Week5">Week 5</Link>
+      <Link to="/Week6">Week 6</Link>
     </li>
   </ul>
 </nav>
@@ -40,6 +44,12 @@ const Homepage  = () => (<nav>
           </Route>
           <Route path="/Week4">
             <Week4 />
+          </Route>
+          <Route path="/Week5">
+            <Week5 />
+          </Route>
+          <Route path="/Week6">
+            <Week6 />
           </Route>
           <Route path="/">
             <Homepage />

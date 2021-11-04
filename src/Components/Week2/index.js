@@ -71,63 +71,16 @@ const TextComponent1 = styled.div`
     color: #000000;
 
 
-    display: inline-block;
-    vertical-align: middle;
-
-    
-
-`;
-
-
-
-
-const PublicExpandIcon = styled.div`
-
-
-
-
-    vertical-align: middle;
-
-    height: 24px;
-    width: 24px;
-
-
-    
-
-
-    display: flex;
-    justify-content: center;
+    display: flex
     align-items: center;
-
-    
-
-`;
-
-const PublicExpandIconBoundingBox = styled.div`
-
-
-
-
-
-    vertical-align: middle;
-
-    height: 20px;
-    width: 20px;
-
-
-
-
-    display: flex;
     justify-content: center;
-    align-items: center;
-
-    
-
-
 
     
 
 `;
+
+
+
 
 const PublicExpandIconTouchTarget = styled.div`
 
