@@ -8,8 +8,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-  email: yup.string().required("Email is required").email("Not a valid email"),
-  password: yup.string().required("Password is required"),
+  email: yup.string().required("Invalid Phone number/Username/Email!").email("Not a valid email"),
+  password: yup.string().required("Invalid Password!"),
 });
 
 const StyledWrapper = styled.div`
@@ -66,6 +66,7 @@ const StyledInput = styled.input`
     border-bottom: 1px solid #3E6264;
     
     
+    
   padding-left:16px;
   padding-top: 12px;
   width: 280px;
@@ -75,6 +76,8 @@ const StyledInput = styled.input`
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom: 1px solid #3E6264;
+
+
   ::placeholder { 
     color:#8155B4;
 
@@ -92,8 +95,6 @@ const StyledInput = styled.input`
 
 
 
-
-
   
 `;
 
@@ -107,12 +108,30 @@ height: 20px;
 width: 20px;
 border-right: none;
 padding: 14px 14px 14px 14px;
-position: relative;
-  top: 38%;
-  right: 16%;
+margin-bottom: -20px;
+display : block;
+position: absolute;
+z-index: 1000;
+margin-left: 230px; 
 
 
+`;
 
+const StyledLabel = styled.p`
+
+
+border-right: none;
+display : block;
+position: absolute;
+margin-left: 16px; 
+transform: translate(0px, -14px);
+
+
+width: 280px;
+height: 20px;
+font-size: .875rem;
+font-family: 'Baloo Thambi 2', cursive;
+color: #8155B4;
 
 
 `;
@@ -153,21 +172,19 @@ cursor: pointer;
 `;
 
 const Lines = styled.div`
-
 font-weight: bold; 
 display: flex;
 width: 280px;
-color: #8155B4;
 margin: 0 auto;
-height: 0.2px;
-border:0;
-
+color: #8155B4;
 span{
-margin: 0px 1em;
+  margin: 0px 1em;
 }
 hr{
-width:180px;
-}
+  width:180px;
+  border: 0;
+  background-color:#8155B4;
+  height:2px;
 `;
 
 const SocialMedia = styled.button`
@@ -238,12 +255,11 @@ const Week6 = () => {
       {!submitted && (
       
       
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} >
           
-        
-        
-          <StyledInput
-            
+          
+          <StyledLabel>Email</StyledLabel>
+          <StyledInput autoFocus
             type="text"
             name="email"
             placeholder="Email"
@@ -255,6 +271,14 @@ const Week6 = () => {
         <br />
 
         
+      
+          <StyledIcon
+            src={showPassword ? hideIcon : showIcon}
+            onClick={handleClick}
+          ></StyledIcon>
+
+        
+          <StyledLabel>Password</StyledLabel>
           <StyledInput
             type={showPassword ? "text" : "password"}
             name="password"
@@ -284,7 +308,8 @@ const Week6 = () => {
         </Lines>
 
         <br />
-        <br />
+     
+
       
         <SocialMedia>
                       <SvgIcon viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.57143 3H18.4286C19.8487 3 21 4.15127 21 5.57143V18.4286C21 19.8487 19.8487 21 18.4286 21L15.8572 21V14.9677H17.4L18.4286 12.2641H15.8572V10.186C15.8572 9.10462 17.9143 9.64532 17.9143 9.64532V6.94182C13.8 6.40113 12.7714 8.56392 12.7714 10.186V12.2641H10.7143V14.9677H12.7714V21L5.57143 21C4.15127 21 3 19.8487 3 18.4286V5.57143C3 4.15127 4.15127 3 5.57143 3Z" /></SvgIcon>
@@ -309,10 +334,7 @@ const Week6 = () => {
 
         </StyledHeader3>
 
-        <StyledIcon
-            src={showPassword ? hideIcon : showIcon}
-            onClick={handleClick}
-          ></StyledIcon>
+        
       </form>)}
     </StyledWrapper>
   );
