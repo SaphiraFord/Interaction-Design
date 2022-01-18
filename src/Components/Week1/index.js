@@ -29,7 +29,7 @@ const StyledWrapper2 = styled.div`
 
 
 
-const Week1 = () => (
+export const Week1 = () => (
 
     
 
@@ -38,7 +38,7 @@ const Week1 = () => (
               <h1>Cativity</h1>
             </StyledWrapper2>
             
-            <StyledWrapper1><img src ={catLoadingScreen} /></StyledWrapper1>
+            <StyledWrapper1><img src ={catLoadingScreen} alt="Cat looking at fish, loading circle."/></StyledWrapper1>
 
             
 
