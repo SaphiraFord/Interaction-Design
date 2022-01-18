@@ -1,27 +1,34 @@
-//importing the library React and saving it to react to use it's methods
+//importing the library React and saving it to react to use its methods
 //in react functions MUST return something
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Week1 from "./Components/Week1";
 import Week2 from "./Components/Week2";
 import Week3 from "./Components/Week3";
 import Week4 from "./Components/Week4";
 import Week5 from "./Components/Week5";
 import Week6 from "./Components/Week6";
 
+
+
 //Will instantly return our navigation 
+
 const Homepage  = () => (<nav>
   <h1>Welcome to Interaction Design!</h1>
-  <ul>
-    <li>
-      <Link to="/Week1">Week 1</Link>
-      <Link to="/Week2">Week 2</Link>
-      <Link to="/Week3">Week 3</Link>
-      <Link to="/Week4">Week 4</Link>
-      <Link to="/Week5">Week 5</Link>
-      <Link to="/Week6">Week 6</Link>
-    </li>
-  </ul>
+
+      <Link to="/Week2">Component 1</Link>
+<br></br>
+<br></br>
+      <Link to="/Week3">Component 2</Link>
+<br></br>
+<br></br>
+      <Link to="/Week4">Component 3</Link>
+<br></br>
+<br></br>
+      <Link to="/Week5">Component 4</Link>
+<br></br>
+<br></br>
+      <Link to="/Week6">Component 5</Link>
+
 </nav>
 );
 
@@ -33,9 +40,6 @@ const Homepage  = () => (<nav>
     return (
       <Router>
         <Switch>
-          <Route path="/Week1">
-            <Week1 />
-          </Route>
           <Route path="/Week2">
             <Week2 />
           </Route>
